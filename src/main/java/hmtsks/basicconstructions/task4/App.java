@@ -54,7 +54,7 @@ public class App {
             }break;
             case 6:{
                 tproduct(array);
-            }
+            }break;
             default : exit = true;
             break;
         }

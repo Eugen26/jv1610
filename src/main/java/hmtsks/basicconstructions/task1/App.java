@@ -9,15 +9,7 @@ public class App {
     public static void main(String[] args) {
         programm();
     }
-    
-    static void printMainMenu(){
-        System.out.println("Введите пункт меню");
-        System.out.println("1.Кратные 2");
-        System.out.println("2.Кратные 3");
-        System.out.println("3.Кратные 5");
-        System.out.println("4.Кратные 7");
-        System.out.println("Выход - любое другое число ");
-    }
+
     static void programm(){
         int[] array = new int[101];
         System.out.println("Исходный массив: ");
@@ -29,10 +21,7 @@ public class App {
             System.out.print( x + " ");
             }
             System.out.println();
-            
-            
-        printMainMenu();
-       
+
  //---------------------------------------------------------------------   
             System.out.println(" Массив кратных 2: ");
                 int sum2 = 0;

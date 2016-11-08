@@ -62,7 +62,7 @@ public class App {
             case 6:{
                 mmultmult(array2d);
                     System.out.println("");
-            }
+            }break;
             default : exit = true;
             break;
         }
