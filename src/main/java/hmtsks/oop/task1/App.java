@@ -59,17 +59,17 @@ groupList(students);
          return choise;
      }
 //------------------------------------------------------------------------------
-    static void listStudentsOfChosenDepartment(Student[] students, String needDep){
-    //    Student[] array = new Student[10];
+    static Student[] listStudentsOfChosenDepartment(Student[] students, String needDep){
+        Student[] array = new Student[10];
         for (Student student : students) {
-        //    for (Student student1 : array) {
+//            for (Student student1 : array) {
                 if(student.getDepartment().equals(needDep)){
-                //    array[student1] = students[student];
-                           System.out.println(student);
+                    
+                 //          System.out.println(student);
                 }
             }
-      //  }
-    // return array;
+//        }
+     return array;
     }
 //------------------------------------------------------------------------------
     static String chooseDepartment (){

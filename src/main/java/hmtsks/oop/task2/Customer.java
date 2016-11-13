@@ -2,7 +2,7 @@
 package hmtsks.oop.task2;
 
 
-public class Customer {
+public class Customer implements Comparable{
      int id ;
      String fullname;
      String adress;
@@ -63,12 +63,11 @@ public class Customer {
     public void setAccountnumber(int accountnumber) {
         this.accountnumber = accountnumber;
     }
-     
-     public int compareTo(Customer o){
-        return this.compareTo(o.fullname);
+    
+     @Override
+    public int compareTo(Object obj){
+        Customer o = (Customer) obj;
+             return this.fullname.compareTo(o.fullname);
     }
 
-    private int compareTo(String fullname) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }
