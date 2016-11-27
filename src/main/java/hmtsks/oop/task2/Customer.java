@@ -66,8 +66,8 @@ public class Customer implements Comparable{
     
      @Override
     public int compareTo(Object obj){
-        Customer o = (Customer) obj;
-             return this.fullname.compareTo(o.fullname);
+        Customer c = (Customer) obj;
+             return (this.fullname.compareTo(c.fullname));
     }
 
 }

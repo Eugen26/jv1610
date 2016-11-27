@@ -26,10 +26,10 @@ public class App {
         
 //        System.out.println("Книги заданного автора: ");
 //        authorList(books);
-//        publishingList(books);
-          booksList(books);
+        publishingList(books);
+//          booksList(books);
     }
-//------------------------------------------------------------------------------   
+//------------------------------------------------------------------------------
     static void authorList(Book[] books){
         String author;
         System.out.println("Введите автора");
@@ -52,8 +52,6 @@ public class App {
         for (Book book : books) {
             if(book.getPublishing().equals(pub)){
                 System.out.println(book);
-            }else{
-                System.out.println("Совпадения не найдены");
             }
         }
     }
@@ -69,4 +67,5 @@ public class App {
         }
     
     }
+//------------------------------------------------------------------------------
 }

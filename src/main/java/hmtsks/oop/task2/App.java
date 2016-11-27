@@ -8,9 +8,9 @@ import java.util.Scanner;
 public class App {
 
     public static void main(String[] args) {
-        program();
+        programm();
     }
-    static void program(){
+    static void programm(){
         Customer[] customers = new Customer[10];
         
         customers[0] = new Customer(1, "Зеленов Николай Константинович", "Kharkiv, Sumska str. 12", 10000001, 111);
@@ -25,8 +25,25 @@ public class App {
         customers[9] = new Customer(10, "Ильин Клавдий Альбертович", "Kharkiv, Sumska str. 12", 10000010, 110);
         
         customerList(customers);
+        System.out.println("В алфавитном порядке: ");
+        alphabet(customers);
+        for (Customer customer : customers) {
+            System.out.println(customer);
+        }
     }
-    
+//------------------------------------------------------------------------------
+    static void alphabet(Customer[] customers){
+        for (int i = 0; i < customers.length; i++) {
+            for (int j = 0; j < customers.length-1; j++) {
+                if (customers[j].compareTo(customers[j +1]) > 0){
+                    Customer t = customers[j];
+                    customers[j] = customers[j +1];
+                    customers[j +1] = t;
+                }
+            }
+        }
+    }
+//------------------------------------------------------------------------------
     static void customerList(Customer[] customers){
         System.out.println("Введите номер кредитной карты(начало интервала) типа 100000**");
         Scanner in = new Scanner(System.in);

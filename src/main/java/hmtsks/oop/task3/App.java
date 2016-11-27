@@ -23,8 +23,8 @@ public class App {
         patients[8] = new Patient(9, "Вирская Алёна Богдановна",       "Kharkiv, Sumska str. 12",  "09300000008", 1008, "diarrhea");
         patients[9] = new Patient(10, "Ильин Клавдий Альбертович",     "Kharkiv, Sumska str. 12",  "09300000009", 1009, "bronchitis");
         
-//        String chosenDiagnosis = chooseDiagnosis();
-//        PatientListDiagnosis(patients, chosenDiagnosis);
+        String chosenDiagnosis = chooseDiagnosis();
+        PatientListDiagnosis(patients, chosenDiagnosis);
         PatientListNumber(patients);
         
     }
