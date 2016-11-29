@@ -2,16 +2,16 @@
 package hmtsks.oop2.task1;
 
 
-public class Flower {
-     String freshlevel;
+public class Flower implements Comparable<Object>{
+     int freshlevel;
      int price;
      int stemlength;
      String color;
      
 
-    public Flower(String freshlevel, int price, int stemlength, String color) {
+    public Flower(int freshlevel,  int stemlength, String color) {
         this.freshlevel = freshlevel;
-        this.price = price;
+       
         this.stemlength = stemlength;
         this.color = color;
         
@@ -19,11 +19,10 @@ public class Flower {
 
     @Override
     public String toString() {
-        return "Flower{" + "freshlevel=" + freshlevel + ", price=" + price + ", stemlength=" + stemlength + ", color=" + color + '}';
+        return "Flower{" + "freshlevel=" + freshlevel + ",  stemlength=" + stemlength + ", color=" + color + '}';
     }
+    
 
-
-  
     public int getStemlength() {
         return stemlength;
     }
@@ -36,25 +35,24 @@ public class Flower {
         return color;
     }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public String getFreshlevel() {
+    public int getFreshlevel() {
         return freshlevel;
-    }
-
-    public void setFreshlevel(String freshlevel) {
-        this.freshlevel = freshlevel;
     }
 
     public int getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
-    }
-    
-    
+    @Override
+    public int compareTo(Object o) {
+        Flower temp = (Flower) o;
+        if(this.freshlevel < temp.freshlevel){
+            return -1;
+        }else if(this.freshlevel < temp.freshlevel){
+                return 1;
+            }
+        return 0;
+        }
 }
+
+

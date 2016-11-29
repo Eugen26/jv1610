@@ -1,47 +1,52 @@
 
 package hmtsks.oop2.task1;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 
 public class Accessory {
-    int price;
-    String color;
-    int length;
+    int accessoryPrice;
+    private final ArrayList<Flower> flowers;
 
-    public Accessory(int price, String color, int length) {
-        this.price = price;
-        this.color = color;
-        this.length = length;
+    public Accessory(ArrayList<Flower> flowers) {
+        this.flowers = flowers;
     }
 
-    public int getPrice() {
-        return price;
+            public int totalPrice(){
+                int totalPrice = 0;
+                    for(Flower flower: flowers ){
+                    totalPrice += flower.getPrice();
+                }
+
+                    totalPrice += this.getAccessoryPrice();
+                return totalPrice;
+            }
+            
+            public ArrayList<Flower> findFlowers(int minStemLength, int maxStemLength){
+                ArrayList<Flower> foundFlowers = new ArrayList<>();
+                    for(Flower flower : flowers){
+                        if(flower.getStemlength() > minStemLength && flower.getStemlength() < maxStemLength){
+                            foundFlowers.add(flower);
+                        }
+                    }
+                    return foundFlowers;
+            }
+            
+                public void sortByFreshlevel(){
+                Collections.sort(flowers);
+                }
+                
+                public void printSort(){
+                    for (Flower flower : flowers) {
+                        System.out.println(flower.getFreshlevel());
+                    }
+                }
+            
+    public int getAccessoryPrice() {
+        return accessoryPrice;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public int getLength() {
-        return length;
-    }
-
-    public void setLength(int length) {
-        this.length = length;
-    }
-
-    @Override
-    public String toString() {
-        return "Accessory{" + "price=" + price + ", color=" + color + ", length=" + length + '}';
-    }
-    
 
 
 }
