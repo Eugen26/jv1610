@@ -6,10 +6,10 @@ package hmtsks.oop2.task8.carriage;
  */
 public class Carriage implements Comparable<Object> {
 
-    int capacity;
-    int busyPlace;
-    double baggage;
-    int comfortLvl;
+    public int capacity;
+    public int busyPlace;
+    public double baggage;
+    public int comfortLvl;
 
     public Carriage(int capacity, int busyPlace, double baggage, int comfortLvl) {
         this.capacity = capacity;

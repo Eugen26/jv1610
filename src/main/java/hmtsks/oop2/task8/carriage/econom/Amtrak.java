@@ -6,8 +6,8 @@ package hmtsks.oop2.task8.carriage.econom;
  */
 public class Amtrak extends Econom {
 
-    public Amtrak(int capacity, int busyPlace, double baggage, int comfortLvl) {
-        super(capacity, busyPlace, baggage, comfortLvl);
+    public Amtrak(int busyPlace, double baggage) {
+        super(54, busyPlace, baggage);
     }
 
 }

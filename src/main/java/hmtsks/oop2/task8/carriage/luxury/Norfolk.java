@@ -6,9 +6,8 @@ package hmtsks.oop2.task8.carriage.luxury;
  */
 public class Norfolk extends Luxury {
 
-    public Norfolk(int capacity, int busyPlace, double baggage, int comfortLvl) {
-        super(capacity, busyPlace, baggage, comfortLvl);
-        capacity = 14;
+    public Norfolk(int busyPlace, double baggage) {
+        super(14, busyPlace, baggage);
     }
 
 }

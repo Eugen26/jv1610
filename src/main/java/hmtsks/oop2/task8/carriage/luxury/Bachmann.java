@@ -6,9 +6,8 @@ package hmtsks.oop2.task8.carriage.luxury;
  */
 public class Bachmann extends Luxury {
 
-    public Bachmann(int capacity, int busyPlace, double baggage, int comfortLvl) {
-        super(capacity, busyPlace, baggage, comfortLvl);
-        capacity = 12;
+    public Bachmann(int busyPlace, double baggage) {
+        super(12, busyPlace, baggage);
     }
 
 }

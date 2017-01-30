@@ -8,9 +8,8 @@ import hmtsks.oop2.task8.carriage.Carriage;
  */
 public abstract class Common extends Carriage {
 
-    public Common(int capacity, int busyPlace, double baggage, int comfortLvl) {
-        super(capacity, busyPlace, baggage, comfortLvl);
-        comfortLvl = 4;
+    public Common(int capacity, int busyPlace, double baggage) {
+        super(capacity, busyPlace, baggage, 4);
     }
 
 }

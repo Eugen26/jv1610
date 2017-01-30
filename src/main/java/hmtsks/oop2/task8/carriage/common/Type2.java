@@ -6,9 +6,8 @@ package hmtsks.oop2.task8.carriage.common;
  */
 public class Type2 extends Common {
 
-    public Type2(int capacity, int busyPlace, double baggage, int comfortLvl) {
-        super(capacity, busyPlace, baggage, comfortLvl);
-        capacity = 62;
+    public Type2(int busyPlace, double baggage) {
+        super(96, busyPlace, baggage);
     }
 
 }

@@ -1,24 +1,27 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package hmtsks.oop2.task8.railway;
+package hmtsks.oop2.task8.train;
 
 import hmtsks.oop2.task8.carriage.Carriage;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 /**
  *
  * @author Eugen
  */
-public class Railway {
+public class Train {
 
     ArrayList<Carriage> carrieges;
 
-    public Railway(ArrayList<Carriage> carrieges) {
+    public Train(ArrayList<Carriage> carrieges) {
         this.carrieges = carrieges;
+    }
+
+//------------------------------------------------------------------------------
+    public void printTrain() {
+        for (Carriage carriege : carrieges) {
+            System.out.println(carriege);
+        }
     }
 
 //------------------------------------------------------------------------------
@@ -40,13 +43,13 @@ public class Railway {
     }
 //------------------------------------------------------------------------------
 
-    public ArrayList<Carriage> searchCar(int min, int max) {
+    public ArrayList<Carriage> searchCar() {
         ArrayList<Carriage> foundCar = new ArrayList<>();
         Scanner in = new Scanner(System.in);
         System.out.println("Choose min number of passengers ");
-        min = in.nextInt();
+        int min = in.nextInt();
         System.out.println("Choose max number of passengers ");
-        max = in.nextInt();
+        int max = in.nextInt();
         for (Carriage carriege : carrieges) {
             if (carriege.getBusyPlace() >= min && carriege.getBusyPlace() <= max) {
                 foundCar.add(carriege);
@@ -55,5 +58,18 @@ public class Railway {
         return foundCar;
     }
 //------------------------------------------------------------------------------
+
+    public void sort() {
+        Collections.sort(carrieges);
+    }
+//------------------------------------------------------------------------------
+
+    public void printSort() {
+        System.out.println("After sorting");
+        for (Carriage carriege : carrieges) {
+            System.out.println(carriege);
+        }
+
+    }
 
 }

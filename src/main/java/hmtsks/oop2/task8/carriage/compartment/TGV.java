@@ -6,8 +6,8 @@ package hmtsks.oop2.task8.carriage.compartment;
  */
 public class TGV extends Compartment {
 
-    public TGV(int capacity, int busyPlace, double baggage, int comfortLvl) {
-        super(capacity, busyPlace, baggage, comfortLvl);
+    public TGV(int busyPlace, double baggage) {
+        super(40, busyPlace, baggage);
     }
 
 }

@@ -8,9 +8,8 @@ import hmtsks.oop2.task8.carriage.Carriage;
  */
 public abstract class Compartment extends Carriage {
 
-    public Compartment(int capacity, int busyPlace, double baggage, int comfortLvl) {
-        super(capacity, busyPlace, baggage, comfortLvl);
-
+    public Compartment(int capacity, int busyPlace, double baggage) {
+        super(capacity, busyPlace, baggage, 2);
     }
 
 }

@@ -8,9 +8,9 @@ import hmtsks.oop2.task8.carriage.Carriage;
  */
 public abstract class Luxury extends Carriage {
 
-    public Luxury(int capacity, int busyPlace, double baggage, int comfortLvl) {
-        super(capacity, busyPlace, baggage, comfortLvl);
-        comfortLvl = 1;
+    public Luxury(int capacity, int busyPlace, double baggage) {
+        super(capacity, busyPlace, baggage, 1);
+
     }
 
 }
